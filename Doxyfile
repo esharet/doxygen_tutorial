@@ -1,0 +1,41 @@
+#---------------------------
+# Project info
+#---------------------------
+PROJECT_NAME           = "MyProject"
+PROJECT_BRIEF          = "Minimal Doxygen example rendering Markdown"
+OUTPUT_DIRECTORY       = docs_out
+
+#---------------------------
+# Input / output
+#---------------------------
+INPUT                  = docs src
+FILE_PATTERNS          = *.md *.markdown *.png
+RECURSIVE              = YES
+EXCLUDE                = 
+
+#---------------------------
+# Build options
+#---------------------------
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+
+#---------------------------
+# Markdown support
+#---------------------------
+MARKDOWN_SUPPORT       = YES
+EXTENSION_MAPPING      = md=markdown
+
+#---------------------------
+# Main page
+#---------------------------
+USE_MDFILE_AS_MAINPAGE = docs/index.md
+
+# Include extra files in HTML output
+HTML_EXTRA_FILES = docs/mermaid.min.js
+
+# Optional: include your custom header
+# HTML_HEADER = docs/header.html
+HTML_FOOTER = docs/footer.html
+
+USE_MATHJAX            = YES
+IMAGE_PATH = docs/images
